@@ -257,7 +257,7 @@ Carousel showcasing projects with hover effects and navigation arrows.
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-bg-secondary rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-bg-secondary text-black rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
                     placeholder="Your Name"
                   />
                 </div>
@@ -272,7 +272,7 @@ Carousel showcasing projects with hover effects and navigation arrows.
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-bg-secondary rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-bg-secondary text-black rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -289,7 +289,7 @@ Carousel showcasing projects with hover effects and navigation arrows.
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-bg-secondary rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
+                  className="w-full px-4 py-3 bg-bg-secondary text-black rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300"
                   placeholder="Project Discussion"
                 />
               </div>
