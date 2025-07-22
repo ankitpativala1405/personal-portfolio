@@ -46,3 +46,4 @@ app.post('/api/send-mail', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+
