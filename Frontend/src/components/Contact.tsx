@@ -20,8 +20,9 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     try {
-      const response = await fetch('https://personal-portfolio-bhk3.onrender.com/', {
+      const response = await fetch('https://personal-portfolio-bhk3.onrender.com/api/send-mail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
