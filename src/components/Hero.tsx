@@ -1,0 +1,194 @@
+import React, { useEffect, useState } from 'react';
+import { ChevronDown, Github, Linkedin, Mail, MapPin, Phone, Download } from 'lucide-react';
+
+const Hero = () => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const roles = ['MERN Stack Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'];
+
+  const downloadSourceCode = () => {
+    // Create a simple text file with instructions for now
+    const codeInfo = `
+# Ankit Pativala - Portfolio Source Code
+
+## Technologies Used:
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Lucide React for icons
+- Vite for build tooling
+- Custom CSS animations and glass morphism effects
+
+## Features:
+- Dark theme with gradient backgrounds
+- Animated particles background
+- Glass morphism effects
+- Responsive design
+- Interactive skill progress bars
+- Project carousel with hover effects
+- Contact form with validation
+- Smooth scrolling and animations
+
+## To run this project:
+1. Clone or download the source code
+2. Run: npm install
+3. Run: npm run dev
+4. Open http://localhost:5173
+
+## Contact:
+Email: ankitj1405@gmail.com
+Phone: +91 9723665181
+LinkedIn: https://www.linkedin.com/in/ankit-pativala-b2b02a194/
+GitHub: https://github.com/ankitpativala1405
+
+Built with ❤️ by Ankit Pativala
+`;
+
+    const blob = new Blob([codeInfo], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Ankit_Portfolio_Source_Info.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  useEffect(() => {
+    const handleType = () => {
+      const current = loopNum % roles.length;
+      const fullText = roles[current];
+
+      setText(isDeleting 
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 500);
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed, roles]);
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <div className="container text-center relative z-10">
+        <div className="animate-slide-in-up">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-48 h-48 rounded-full glass-card overflow-hidden animate-float">
+                <img 
+                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Ankit Pativala"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center animate-pulse">
+                <span className="text-2xl">💻</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Name and Title */}
+          <h1 className="text-5xl md:text-7xl font-black mb-4">
+            Hi, I'm <span className="gradient-text">Ankit</span>
+          </h1>
+          
+          <div className="text-2xl md:text-4xl font-medium mb-6 h-16 flex items-center justify-center">
+            <span className="text-text-secondary">I'm a </span>
+            <span className="gradient-text ml-2 min-w-0">
+              {text}
+              <span className="animate-pulse">|</span>
+            </span>
+          </div>
+
+          {/* Description */}
+          <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+            Motivated MERN Stack Developer skilled in building scalable web applications using React.js, Next.js, and Redux. 
+            Experienced with modern UI frameworks and backend technologies.
+          </p>
+
+          {/* Contact Info */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <div className="flex items-center gap-2 text-text-secondary">
+              <Phone size={20} className="text-primary" />
+              <span>+91 9723665181</span>
+            </div>
+            <div className="flex items-center gap-2 text-text-secondary">
+              <Mail size={20} className="text-primary" />
+              <span>ankitj1405@gmail.com</span>
+            </div>
+            <div className="flex items-center gap-2 text-text-secondary">
+              <MapPin size={20} className="text-primary" />
+              <span>Surat, Gujarat</span>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="#contact" className="btn btn-primary">
+              Get In Touch
+            </a>
+            <a href="#projects" className="btn btn-outline">
+              View My Work
+            </a>
+            <button 
+              onClick={downloadSourceCode}
+              className="btn btn-glass flex items-center gap-2"
+            >
+              <Download size={20} />
+              Download Code Info
+            </button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center gap-6">
+            <a 
+              href="https://github.com/ankitpativala1405"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+            >
+              <Github size={24} />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/ankit-pativala-b2b02a194/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a 
+              href="https://portfolio-six-red-97.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+            >
+              <span className="font-bold">P</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown size={32} className="text-primary" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
