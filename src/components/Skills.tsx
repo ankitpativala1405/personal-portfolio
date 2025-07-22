@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Server, Database, Palette, GitBranch, Zap } from 'lucide-react';
+import { Code, Server, Database, Palette, GitBranch, Zap, Usb } from 'lucide-react';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
@@ -9,12 +9,13 @@ const Skills = () => {
       icon: Code,
       title: 'Frontend Development',
       skills: [
-        { name: 'React.js', level: 95 },
-        { name: 'Next.js', level: 90 },
+        { name: 'React.js', level: 75 },
+        { name: 'Next.js', level: 70 },
         { name: 'JavaScript', level: 95 },
-        { name: 'TypeScript', level: 85 },
         { name: 'HTML5 & CSS3', level: 98 },
-        { name: 'Tailwind CSS', level: 92 }
+        { name: 'Media Queries', level: 90 },
+        { name: 'JQueries', level: 80 },
+        { name: 'Figma', level: 70 }
       ]
     },
     backend: {
@@ -35,6 +36,12 @@ const Skills = () => {
       skills: [
         { name: 'MongoDB', level: 88 },
         { name: 'Moon Modeler', level: 75 },
+      ]
+    },
+    Version_Controll: {
+      icon: Usb,
+      title: 'Version Controll',
+      skills: [
         { name: 'Git & GitHub', level: 92 },
         { name: 'GitLab', level: 85 },
         { name: 'Vercel', level: 90 },
@@ -45,24 +52,25 @@ const Skills = () => {
       icon: Palette,
       title: 'UI Libraries',
       skills: [
-        { name: 'Material UI', level: 92 },
+        { name: 'Material UI', level: 82 },
         { name: 'Bootstrap', level: 95 },
+        { name: 'React Bootstrap', level: 75 },
+        { name: 'Flow Bite', level: 79 },
         { name: 'Ant Design', level: 85 },
         { name: 'HeroUI', level: 80 },
         { name: 'Framer Motion', level: 88 },
-        { name: 'Figma', level: 85 }
+        { name: 'Figma', level: 85 },
+        { name: 'Tailwind CSS', level: 92 },
       ]
     },
     animation: {
       icon: Zap,
-      title: 'Animation & Effects',
+      title: 'Animation & Effects Library',
       skills: [
         { name: 'CSS Animation', level: 90 },
         { name: 'Framer Motion', level: 88 },
         { name: 'AOS', level: 85 },
         { name: 'Animista', level: 82 },
-        { name: 'GSAP', level: 75 },
-        { name: 'Lottie', level: 70 }
       ]
     },
     other: {
@@ -72,7 +80,7 @@ const Skills = () => {
         { name: 'Web Design', level: 92 },
         { name: 'Design Thinking', level: 88 },
         { name: 'DSA with C++', level: 80 },
-        { name: 'Communication', level: 95 },
+        { name: 'Strong Communication', level: 95 },
         { name: 'Problem Solving', level: 92 },
         { name: 'Team Collaboration', level: 90 }
       ]
@@ -99,11 +107,10 @@ const Skills = () => {
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 ${
-                  activeCategory === key
-                    ? 'bg-gradient-to-r from-primary to-secondary text-white'
-                    : 'glass-card hover:scale-105'
-                }`}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 ${activeCategory === key
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white'
+                  : 'glass-card hover:scale-105'
+                  }`}
               >
                 <Icon size={20} />
                 <span className="font-medium">{category.title}</span>
@@ -122,9 +129,9 @@ const Skills = () => {
                   <span className="text-primary font-bold">{skill.level}%</span>
                 </div>
                 <div className="w-full bg-bg-secondary rounded-full h-3 overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
-                    style={{ 
+                    style={{
                       width: `${skill.level}%`,
                       animationDelay: `${index * 100}ms`
                     }}

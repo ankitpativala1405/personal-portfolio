@@ -7,10 +7,9 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = ['MERN Stack Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'];
+  const roles = ['MERN Stack Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer', "Web Designer"];
 
   const downloadSourceCode = () => {
-    // Create a simple text file with instructions for now
     const codeInfo = `
 # Ankit Pativala - Portfolio Source Code
 
@@ -31,19 +30,11 @@ const Hero = () => {
 - Contact form with validation
 - Smooth scrolling and animations
 
-## To run this project:
-1. Clone or download the source code
-2. Run: npm install
-3. Run: npm run dev
-4. Open http://localhost:5173
-
 ## Contact:
 Email: ankitj1405@gmail.com
 Phone: +91 9723665181
 LinkedIn: https://www.linkedin.com/in/ankit-pativala-b2b02a194/
 GitHub: https://github.com/ankitpativala1405
-
-Built with ❤️ by Ankit Pativala
 `;
 
     const blob = new Blob([codeInfo], { type: 'text/plain' });
@@ -62,7 +53,7 @@ Built with ❤️ by Ankit Pativala
       const current = loopNum % roles.length;
       const fullText = roles[current];
 
-      setText(isDeleting 
+      setText(isDeleting
         ? fullText.substring(0, text.length - 1)
         : fullText.substring(0, text.length + 1)
       );
@@ -86,10 +77,10 @@ Built with ❤️ by Ankit Pativala
       <div className="container text-center relative z-10">
         <div className="animate-slide-in-up">
           {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-8 flex justify-center mt-3">
             <div className="relative">
               <div className="w-48 h-48 rounded-full glass-card overflow-hidden animate-float">
-                <img 
+                <img
                   src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Ankit Pativala"
                   className="w-full h-full object-cover"
@@ -105,7 +96,7 @@ Built with ❤️ by Ankit Pativala
           <h1 className="text-5xl md:text-7xl font-black mb-4">
             Hi, I'm <span className="gradient-text">Ankit</span>
           </h1>
-          
+
           <div className="text-2xl md:text-4xl font-medium mb-6 h-16 flex items-center justify-center">
             <span className="text-text-secondary">I'm a </span>
             <span className="gradient-text ml-2 min-w-0">
@@ -115,21 +106,30 @@ Built with ❤️ by Ankit Pativala
           </div>
 
           {/* Description */}
-          <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
-            Motivated MERN Stack Developer skilled in building scalable web applications using React.js, Next.js, and Redux. 
-            Experienced with modern UI frameworks and backend technologies.
+          <p className="text-xl text-text-secondary mb-8 max-w-5xl mx-auto leading-relaxed">
+            Motivated and creative MERN Stack Developer in building scalable web
+            applications using React.js, Next.js, and Redux. Skilled in crafting modern,
+            responsive user interfaces with frameworks like Material UI, Tailwind CSS, and
+            others. Strong foundation in HTML, CSS, JavaScript, with additional knowledge of
+            backend technologies such as Node.js, Express.js, and RESTful APIs. A logical
+            problem-solver known for a creative mindset, adaptability under pressure, and a
+            collaborative spirit. Eager to tackle new challenges, continuously learn, and
+            contribute to developing excellent user-centric web solutions.
           </p>
 
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2 text-text-secondary">
+            <a
+              href="tel:+919723665181"
+              className="flex items-center gap-2 text-text-secondary hover:underline"
+            >
               <Phone size={20} className="text-primary" />
               <span>+91 9723665181</span>
-            </div>
-            <div className="flex items-center gap-2 text-text-secondary">
+            </a>
+            <a className="flex items-center gap-2 text-text-secondary"  href="mailto:ankitj1405@gmail.com">
               <Mail size={20} className="text-primary" />
               <span>ankitj1405@gmail.com</span>
-            </div>
+            </a>
             <div className="flex items-center gap-2 text-text-secondary">
               <MapPin size={20} className="text-primary" />
               <span>Surat, Gujarat</span>
@@ -144,7 +144,7 @@ Built with ❤️ by Ankit Pativala
             <a href="#projects" className="btn btn-outline">
               View My Work
             </a>
-            <button 
+            <button
               onClick={downloadSourceCode}
               className="btn btn-glass flex items-center gap-2"
             >
@@ -155,7 +155,7 @@ Built with ❤️ by Ankit Pativala
 
           {/* Social Links */}
           <div className="flex justify-center gap-6">
-            <a 
+            <a
               href="https://github.com/ankitpativala1405"
               target="_blank"
               rel="noopener noreferrer"
@@ -163,7 +163,7 @@ Built with ❤️ by Ankit Pativala
             >
               <Github size={24} />
             </a>
-            <a 
+            <a
               href="https://www.linkedin.com/in/ankit-pativala-b2b02a194/"
               target="_blank"
               rel="noopener noreferrer"
@@ -171,7 +171,7 @@ Built with ❤️ by Ankit Pativala
             >
               <Linkedin size={24} />
             </a>
-            <a 
+            <a
               href="https://portfolio-six-red-97.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
@@ -187,7 +187,7 @@ Built with ❤️ by Ankit Pativala
           <ChevronDown size={32} className="text-primary" />
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

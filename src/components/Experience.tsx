@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Award } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -72,7 +72,7 @@ const Experience = () => {
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"></div>
 
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <div key={exp.id} className="relative pl-20 pb-16 last:pb-0">
                 {/* Timeline Dot */}
                 <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-primary to-secondary rounded-full border-4 border-bg-primary"></div>
@@ -135,12 +135,14 @@ const Experience = () => {
         </div>
 
         {/* Skills Evolution */}
-        <div className="mt-16 glass-card rounded-3xl p-12 text-center">
+        <div className="mt-16 glass-card rounded-2xl p-12 text-center">
           <h3 className="text-3xl font-bold mb-6 gradient-text">Continuous Growth</h3>
-          <p className="text-text-secondary text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-            My journey from the diamond industry to tech has given me a unique perspective on precision, 
-            quality, and attention to detail. These skills, combined with my passion for technology, 
-            drive me to create exceptional digital experiences.
+          <p className="text-text-secondary text-lg leading-relaxed max-w-8xl mx-auto mb-8">
+            My journey from the diamond industry to the world of technology has been driven by an unwavering passion for growth and transformation. Having started my career in an environment that demands precision, patience, and exceptional attention to detail, I’ve carried forward these core values into my work as a developer.
+            <br /><br />
+            Transitioning into tech was not just a career change — it was the pursuit of a vision to build solutions that make a real difference. Every project I undertake is an opportunity to blend creativity with logic, design with usability, and innovation with reliability. I thrive on learning new technologies, mastering modern tools, and staying up-to-date with the ever-evolving landscape of web development.
+            <br /><br />
+            This mindset of continuous improvement fuels my commitment to delivering high-quality digital experiences that solve real-world problems and delight users. I believe that true growth comes from embracing challenges, collaborating with passionate teams, and never settling for average. As I continue to expand my skills and take on new challenges, I’m excited to contribute to projects that push boundaries and create meaningful impact.
           </p>
           <div className="flex justify-center">
             <div className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full font-semibold">

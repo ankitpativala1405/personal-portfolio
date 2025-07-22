@@ -20,14 +20,28 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('http://localhost:5000/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your message was sent.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('Something went wrong.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error.');
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      alert('Thank you for your message! I\'ll get back to you soon.');
-    }, 2000);
+    }
   };
+
 
   const contactInfo = [
     {
@@ -46,14 +60,13 @@ const Contact = () => {
       icon: MapPin,
       title: 'Location',
       value: 'Surat, Gujarat, India',
-      href: 'https://maps.google.com/?q=Surat,Gujarat,India'
+      href: 'https://www.google.com/maps/dir//sagun+height/@21.2230488,72.7644558,12z/data=!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D'
     }
   ];
 
   const downloadCV = () => {
-    // Create a link to download the CV
     const link = document.createElement('a');
-    link.href = '/cv/Ankit_Pativala_CV.pdf';
+    link.href = '/CV/CV - Ankit_Pativala.pdf';
     link.download = 'Ankit_Pativala_CV.pdf';
     document.body.appendChild(link);
     link.click();
@@ -61,7 +74,6 @@ const Contact = () => {
   };
 
   const downloadSourceCode = () => {
-    // Create a comprehensive source code info file
     const sourceCodeInfo = `
 # Ankit Pativala - Portfolio Source Code
 
@@ -88,24 +100,6 @@ This is a modern, responsive portfolio website built with React and TypeScript, 
 - PostCSS
 - Autoprefixer
 
-## 📁 Project Structure
-src/
-├── components/
-│   ├── Navbar.tsx          # Navigation with glass effect
-│   ├── Hero.tsx            # Hero section with typing animation
-│   ├── About.tsx           # About section with stats
-│   ├── Skills.tsx          # Interactive skills showcase
-│   ├── Projects.tsx        # Project carousel
-│   ├── Experience.tsx      # Professional timeline
-│   ├── Contact.tsx         # Contact form
-│   ├── Footer.tsx          # Footer with social links
-│   ├── ParticlesBackground.tsx  # Animated background
-│   └── ScrollToTop.tsx     # Scroll to top button
-├── App.tsx                 # Main app component
-├── App.css                 # Global styles and animations
-├── main.tsx               # App entry point
-└── index.css              # Tailwind imports
-
 ## 🎨 Design Features
 - **Color Palette**: Dark theme with electric blue (#00D4FF), purple (#8B5CF6), teal (#14B8A6)
 - **Glass Morphism**: Backdrop blur effects with subtle borders
@@ -113,17 +107,6 @@ src/
 - **Responsive**: Mobile-first design with breakpoints
 - **Typography**: Inter font family for modern look
 
-## 🚀 Getting Started
-1. Clone the repository
-2. Install dependencies: \`npm install\`
-3. Start development server: \`npm run dev\`
-4. Open http://localhost:5173
-
-## 📦 Available Scripts
-- \`npm run dev\` - Start development server
-- \`npm run build\` - Build for production
-- \`npm run preview\` - Preview production build
-- \`npm run lint\` - Run ESLint
 
 ## 🌟 Key Components Explained
 
@@ -139,11 +122,6 @@ Interactive skills section with categorized tabs and animated progress bars.
 ### Projects.tsx
 Carousel showcasing projects with hover effects and navigation arrows.
 
-## 📱 Responsive Design
-- Mobile: < 768px
-- Tablet: 768px - 1024px  
-- Desktop: > 1024px
-
 ## 🎯 Performance Optimizations
 - Lazy loading for images
 - Optimized animations with CSS transforms
@@ -158,21 +136,6 @@ Carousel showcasing projects with hover effects and navigation arrows.
 - LinkedIn: https://www.linkedin.com/in/ankit-pativala-b2b02a194/
 - GitHub: https://github.com/ankitpativala1405
 - Portfolio: https://portfolio-six-red-97.vercel.app/
-
-## 🔧 Customization
-To customize this portfolio for your own use:
-1. Update personal information in components
-2. Replace project data in Projects.tsx
-3. Modify color scheme in App.css CSS variables
-4. Update skills and experience data
-5. Replace CV file in public/cv/ directory
-
-## 📄 License
-This project is open source and available under the MIT License.
-
----
-Built with ❤️ by Ankit Pativala
-MERN Stack Developer | React Specialist | Full Stack Engineer
 `;
 
     const blob = new Blob([sourceCodeInfo], { type: 'text/plain' });
@@ -204,7 +167,7 @@ MERN Stack Developer | React Specialist | Full Stack Engineer
             <div className="glass-card rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6 gradient-text">Get In Touch</h3>
               <p className="text-text-secondary leading-relaxed mb-8">
-                I'm always interested in new opportunities and exciting projects. 
+                I'm always interested in new opportunities and exciting projects.
                 Whether you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
 
@@ -253,7 +216,7 @@ MERN Stack Developer | React Specialist | Full Stack Engineer
                   <span className="text-text-secondary">Ongoing Support</span>
                 </div>
               </div>
-              
+
               {/* Download Buttons */}
               <div className="mt-6 space-y-3">
                 <button
@@ -342,7 +305,7 @@ MERN Stack Developer | React Specialist | Full Stack Engineer
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-bg-secondary rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-bg-secondary text-black rounded-xl border border-glass-border focus:border-primary focus:outline-none transition-colors duration-300 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>

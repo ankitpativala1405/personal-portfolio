@@ -10,7 +10,7 @@ const Projects = () => {
       title: 'ElecTech - React E-commerce',
       description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
       image: 'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'JavaScript', 'CSS3', 'Local Storage', 'Responsive Design'],
+      technologies: ['React.js', 'JavaScript', 'Node.js', 'CSS3', 'Local Storage', 'Responsive Design' , 'Tailwind CSS'],
       github: 'https://github.com/ankitpativala1405/ELECTECH_REACT',
       live: '#',
       category: 'E-commerce'
@@ -20,7 +20,7 @@ const Projects = () => {
       title: 'Exclusive - Shopping Platform',
       description: 'A comprehensive shopping platform with advanced filtering, product search, user reviews, and secure checkout process. Features modern UI design and smooth user experience.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'JWT Authentication'],
+      technologies: ['Node.js', 'MongoDB', 'JavaScript', 'Express.js', 'HTML', 'CSS', 'Bootstrap'],
       github: 'https://github.com/ankitpativala1405/Exclusive',
       live: '#',
       category: 'Full Stack'
@@ -30,7 +30,7 @@ const Projects = () => {
       title: 'Dhvani Enterprise Website',
       description: 'Corporate website for Dhvani Enterprise featuring company portfolio, services showcase, contact forms, and professional design. Built with modern web technologies.',
       image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
+      technologies: ['HTMl', 'CSS', 'JavaScript', 'Responsive Design' , 'Local Storage'],
       github: 'https://github.com/ankitpativala1405/dhvani-enterprise-website',
       live: '#',
       category: 'Corporate'
@@ -40,7 +40,7 @@ const Projects = () => {
       title: 'Lakme Salon Website',
       description: 'Beauty salon website with appointment booking system, service catalog, gallery showcase, and customer testimonials. Features elegant design and smooth animations.',
       image: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'CSS3', 'JavaScript', 'Animation Libraries'],
+      technologies: ['React.js', 'CSS3', 'JavaScript', 'Animation Libraries' , 'Tailwind CSS'],
       github: 'https://github.com/ankitpativala1405/REACT/tree/master/BEAUTY-PARLOUR',
       live: '#',
       category: 'Service'
@@ -84,7 +84,7 @@ const Projects = () => {
               {/* Project Image */}
               <div className="relative group">
                 <div className="aspect-video rounded-2xl overflow-hidden">
-                  <img 
+                  <img
                     src={projects[currentProject].image}
                     alt={projects[currentProject].title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -98,9 +98,9 @@ const Projects = () => {
                 <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-white text-sm font-medium">
                   {projects[currentProject].category}
                 </div>
-                
+
                 <h3 className="text-3xl font-bold">{projects[currentProject].title}</h3>
-                
+
                 <p className="text-text-secondary text-lg leading-relaxed">
                   {projects[currentProject].description}
                 </p>
@@ -108,7 +108,7 @@ const Projects = () => {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {projects[currentProject].technologies.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className="px-3 py-1 bg-bg-secondary rounded-full text-sm text-primary border border-primary/20"
                     >
@@ -119,7 +119,7 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a 
+                  <a
                     href={projects[currentProject].github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const Projects = () => {
                     <Github size={20} />
                     View Code
                   </a>
-                  <a 
+                  <a
                     href={projects[currentProject].live}
                     className="btn btn-primary flex items-center gap-2"
                   >
@@ -141,13 +141,13 @@ const Projects = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button 
+          <button
             onClick={prevProject}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
           >
             <ChevronLeft size={24} />
           </button>
-          <button 
+          <button
             onClick={nextProject}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
           >
@@ -161,13 +161,12 @@ const Projects = () => {
             <button
               key={project.id}
               onClick={() => setCurrentProject(index)}
-              className={`flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                index === currentProject 
-                  ? 'border-primary scale-110' 
-                  : 'border-transparent hover:border-primary/50'
-              }`}
+              className={`flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === currentProject
+                ? 'border-primary scale-110'
+                : 'border-transparent hover:border-primary/50'
+                }`}
             >
-              <img 
+              <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
