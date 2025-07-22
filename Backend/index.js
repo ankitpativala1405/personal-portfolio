@@ -43,6 +43,16 @@ app.post('/api/send-mail', async (req, res) => {
   }
 });
 
+app.get("/demo", async (_, res) => {
+  try {
+    const data = { message: "Demo route working fine!" };
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Error in /demo route:", error);
+    res.status(500).json({ error: "Something went wrong." });
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
