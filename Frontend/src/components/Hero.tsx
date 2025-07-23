@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, Github, Linkedin, Mail, MapPin, Phone, Download } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -8,45 +8,6 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = ['MERN Stack Developer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer', "Web Designer"];
-
-  const downloadSourceCode = () => {
-    const codeInfo = `
-# Ankit Pativala - Portfolio Source Code
-
-## Technologies Used:
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- Lucide React for icons
-- Vite for build tooling
-- Custom CSS animations and glass morphism effects
-
-## Features:
-- Dark theme with gradient backgrounds
-- Animated particles background
-- Glass morphism effects
-- Responsive design
-- Interactive skill progress bars
-- Project carousel with hover effects
-- Contact form with validation
-- Smooth scrolling and animations
-
-## Contact:
-Email: ankitj1405@gmail.com
-Phone: +91 9723665181
-LinkedIn: https://www.linkedin.com/in/ankit-pativala-b2b02a194/
-GitHub: https://github.com/ankitpativala1405
-`;
-
-    const blob = new Blob([codeInfo], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Ankit_Portfolio_Source_Info.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
 
   useEffect(() => {
     const handleType = () => {
@@ -77,11 +38,11 @@ GitHub: https://github.com/ankitpativala1405
       <div className="container text-center relative z-10">
         <div className="animate-slide-in-up">
           {/* Profile Image */}
-          <div className="mb-8 flex justify-center mt-3">
-            <div className="relative">
+          <div className="mb-8 flex justify-center pt-10">
+            <div className="relative pt-20">
               <div className="w-48 h-48 rounded-full glass-card overflow-hidden animate-float">
                 <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="/Image/ProfileImage.jpeg"
                   alt="Ankit Pativala"
                   className="w-full h-full object-cover"
                 />
@@ -144,13 +105,6 @@ GitHub: https://github.com/ankitpativala1405
             <a href="#projects" className="btn btn-outline">
               View My Work
             </a>
-            <button
-              onClick={downloadSourceCode}
-              className="btn btn-glass flex items-center gap-2"
-            >
-              <Download size={20} />
-              Download Code Info
-            </button>
           </div>
 
           {/* Social Links */}

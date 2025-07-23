@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart, Download, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
@@ -37,37 +37,6 @@ const Footer = () => {
     document.body.removeChild(link);
   };
 
-  const downloadSourceCode = () => {
-    const sourceCodeInfo = `
-# Ankit Pativala - Portfolio Source Code
-
-This portfolio is built with React, TypeScript, and Tailwind CSS.
-
-## Key Features:
-- Dark theme with glass morphism
-- Animated particles background  
-- Interactive components
-- Responsive design
-- Modern animations
-
-## Contact:
-Email: ankitj1405@gmail.com
-Phone: +91 9723665181
-GitHub: https://github.com/ankitpativala1405
-
-Built with ❤️ by Ankit Pativala
-`;
-
-    const blob = new Blob([sourceCodeInfo], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Portfolio_Source_Info.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
 
   return (
     <footer className="bg-bg-secondary border-t border-glass-border">
@@ -117,12 +86,12 @@ Built with ❤️ by Ankit Pativala
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Get In Touch</h4>
-            <div className="space-y-2 text-text-secondary">
-              <p>📍 Surat, Gujarat, India</p>
-              <p>📞 +91 9723665181</p>
-              <p>✉️ ankitj1405@gmail.com</p>
+            <div className="space-y-4 text-text-secondary">
+              <a className='flex gap-3'><MapPin /> Surat, Gujarat, India</a>
+              <a className='flex gap-3' href='tel:+919723665181'><Phone /> +91 9723665181</a>
+              <a className='flex gap-3'><Mail /> ankitj1405@gmail.com</a>
             </div>
-            
+
             {/* Download Buttons */}
             <div className="space-y-2 pt-4">
               <button
@@ -132,13 +101,6 @@ Built with ❤️ by Ankit Pativala
                 <FileText size={16} />
                 Download CV
               </button>
-              <button
-                onClick={downloadSourceCode}
-                className="w-full btn btn-glass text-sm py-2 flex items-center justify-center gap-2"
-              >
-                <Download size={16} />
-                Source Code
-              </button>
             </div>
           </div>
         </div>
@@ -146,7 +108,7 @@ Built with ❤️ by Ankit Pativala
         {/* Bottom Bar */}
         <div className="border-t border-glass-border mt-8 pt-8 text-center">
           <p className="text-text-secondary flex items-center justify-center gap-2">
-            © 2025 Ankit Pativala. Made with <Heart size={16} className="text-red-500" /> and lots of ☕
+            © 2025 Ankit Pativala — All rights reserved.
           </p>
         </div>
       </div>

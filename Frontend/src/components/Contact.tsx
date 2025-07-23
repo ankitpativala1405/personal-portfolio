@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageCircle, Download, FileText } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle,  FileText } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -71,82 +71,6 @@ const Contact = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
-
-  const downloadSourceCode = () => {
-    const sourceCodeInfo = `
-# Ankit Pativala - Portfolio Source Code
-
-## 🚀 Project Overview
-This is a modern, responsive portfolio website built with React and TypeScript, featuring:
-- Dark theme with glass morphism effects
-- Animated particles background
-- Interactive skill progress bars
-- Project carousel with 3D effects
-- Contact form with validation
-- Smooth scrolling and micro-interactions
-
-## 🛠️ Technologies Used
-### Frontend:
-- React 18.3.1
-- TypeScript
-- Tailwind CSS
-- Lucide React (icons)
-- Custom CSS animations
-
-### Build Tools:
-- Vite
-- ESLint
-- PostCSS
-- Autoprefixer
-
-## 🎨 Design Features
-- **Color Palette**: Dark theme with electric blue (#00D4FF), purple (#8B5CF6), teal (#14B8A6)
-- **Glass Morphism**: Backdrop blur effects with subtle borders
-- **Animations**: Smooth transitions, hover effects, typing animation
-- **Responsive**: Mobile-first design with breakpoints
-- **Typography**: Inter font family for modern look
-
-
-## 🌟 Key Components Explained
-
-### ParticlesBackground.tsx
-Creates animated floating particles with connecting lines using HTML5 Canvas.
-
-### Hero.tsx
-Features a typing animation that cycles through different developer roles.
-
-### Skills.tsx
-Interactive skills section with categorized tabs and animated progress bars.
-
-### Projects.tsx
-Carousel showcasing projects with hover effects and navigation arrows.
-
-## 🎯 Performance Optimizations
-- Lazy loading for images
-- Optimized animations with CSS transforms
-- Efficient particle system
-- Minimal bundle size with tree shaking
-
-## 📞 Contact Information
-**Ankit Pativala**
-- Email: ankitj1405@gmail.com
-- Phone: +91 9723665181
-- Location: Surat, Gujarat, India
-- LinkedIn: https://www.linkedin.com/in/ankit-pativala-b2b02a194/
-- GitHub: https://github.com/ankitpativala1405
-- Portfolio: https://portfolio-six-red-97.vercel.app/
-`;
-
-    const blob = new Blob([sourceCodeInfo], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Ankit_Portfolio_Source_Code_Guide.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
   };
 
   return (
@@ -225,13 +149,6 @@ Carousel showcasing projects with hover effects and navigation arrows.
                 >
                   <FileText size={20} />
                   Download CV
-                </button>
-                <button
-                  onClick={downloadSourceCode}
-                  className="w-full btn btn-glass flex items-center justify-center gap-2"
-                >
-                  <Download size={20} />
-                  Download Code Guide
                 </button>
               </div>
             </div>
