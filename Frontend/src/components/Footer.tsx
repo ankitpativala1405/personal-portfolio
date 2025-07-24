@@ -30,7 +30,7 @@ const Footer = () => {
 
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv/Ankit_Pativala_CV.pdf';
+    link.href = '/CV/CV - Ankit_Pativala.pdf';
     link.download = 'Ankit_Pativala_CV.pdf';
     document.body.appendChild(link);
     link.click();
