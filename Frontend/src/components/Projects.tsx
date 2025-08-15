@@ -58,7 +58,7 @@ const Projects = () => {
     {
       id:6,
       title: 'Shofy - E-Commerce Website',
-      description: ``,
+      description: `Shofy is a fully responsive and modern e-commerce web application built to provide a seamless online shopping experience. It allows users to browse products, add items to the cart, manage their orders, and complete secure transactions. Admins can manage products, view orders, and update inventory in real-time. The application focuses on speed, usability, and aesthetic appeal, leveraging modern frontend and backend technologies.`,
       image:'/Image/Shofy.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'CSS3' , 'JavaScript' , 'HTML5' , 'Tailwind CSS' , 'Material UI' , 'Firebase' , 'Local Storage' , 'React Router' , 'React Hooks' , 'cookies' , 'Framer Motion' , 'Swiper' , 'React Toastify' , 'Radix UI'],
       github: 'https://github.com/ankitpativala1405/Shofy',
