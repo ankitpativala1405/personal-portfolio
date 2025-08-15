@@ -54,6 +54,16 @@ const Projects = () => {
       github: 'https://github.com/ankitpativala1405/rw_ankitpativala_mediaquery_projects/tree/master/Min-width_Project',
       live: '#',
       category: 'Portfolio'
+    },
+    {
+      id:6,
+      title: 'Shofy - E-Commerce Website',
+      description: ``,
+      image:'/Image/Shofy.jpg',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'CSS3' , 'JavaScript' , 'HTML5' , 'Tailwind CSS' , 'Material UI' , 'Firebase' , 'Local Storage' , 'React Router' , 'React Hooks' , 'cookies' , 'Framer Motion' , 'Swiper' , 'React Toastify' , 'Radix UI'],
+      github: 'https://github.com/ankitpativala1405/Shofy',
+      live: '#',
+      category: 'Full Stack '
     }
   ];
 
