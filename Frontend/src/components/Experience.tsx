@@ -21,7 +21,7 @@ const Experience = () => {
       id: 2,
       title: 'Full Stack Development Student',
       companies: ['Red And White Skill Institute'],
-      period: 'DECEMBER-2024 - SEPT-2025',
+      period: 'DEC-2024 - SEPT-2025',
       location: 'Surat, Gujarat',
       description: 'Intensive full-stack development program focusing on MERN stack technologies, modern web development practices, and industry best practices.',
       achievements: [
