@@ -21,7 +21,7 @@ const Experience = () => {
       id: 2,
       title: 'Full Stack Development Student',
       companies: ['Red And White Skill Institute'],
-      period: '2024 - 2025',
+      period: 'DECEMBER-2024 - SEPT-2025',
       location: 'Surat, Gujarat',
       description: 'Intensive full-stack development program focusing on MERN stack technologies, modern web development practices, and industry best practices.',
       achievements: [
@@ -29,6 +29,21 @@ const Experience = () => {
         'Modern JavaScript (ES6+)',
         'Database Design & Management',
         'Version Control & Deployment'
+      ]
+    },
+    {
+      id: 3,
+      title: "Full Stack Development",
+      companies: ['Ethnic infotech Pvt Ltd.'],
+      period: 'SEPT-2025 To --',
+      location: 'Surat, Gujarat',
+      description: `Hands-on experience working on real-world full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Involved in developing APIs, frontend interfaces, and integrating databases.
+      Hand-on experience working on real-world Mangeto Developement Using, PHP , ScandiPWA , GraphQLetc.`,
+      achievements: [
+        'Built responsive web applications with React and Node.js',
+        'Implemented RESTful APIs and GraphQL endpoints',
+        'Worked on user authentication using JWT & OAuth2',
+        'Deployed applications on platforms like Vercel and Render'
       ]
     }
   ];
