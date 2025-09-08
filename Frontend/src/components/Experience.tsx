@@ -84,7 +84,6 @@ const Experience = () => {
         {/* Experience Timeline */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="relative">
-            {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"></div>
 
             {experiences.map((exp) => (
