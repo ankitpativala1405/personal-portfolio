@@ -7,16 +7,46 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Shofy - E-Commerce Website',
+      description: `Shofy is a fully responsive and modern e-commerce web application built to provide a seamless online shopping experience. It allows users to browse products, add items to the cart, manage their orders, and complete secure transactions. Admins can manage products, view orders, and update inventory in real-time. The application focuses on speed, usability, and aesthetic appeal, leveraging modern frontend and backend technologies.`,
+      image: '/Image/Shofy.jpg',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'CSS3', 'JavaScript', 'HTML5', 'Tailwind CSS', 'Material UI', 'Firebase', 'Local Storage', 'React Router', 'React Hooks', 'cookies', 'Framer Motion', 'Swiper', 'React Toastify', 'Radix UI'],
+      github: 'https://github.com/ankitpativala1405/Shofy',
+      live: 'https://shofy-gamma.vercel.app',
+      category: 'Full Stack '
+    },
+    {
+      id: 2,
+      title: 'BlueHira',
+      description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
+      image: '/Image/BlueHira.PNG',
+      technologies: ['React.js', 'ScandiPWA', 'Redux', 'React Redux', 'GraphQL', 'React Magnify', 'JavaScript', 'Magento', 'SCSS', 'Local Storage', 'Responsive Design', 'Tailwind CSS', 'RadixUI'],
+      github: '#',
+      live: 'https://www.bluehira.com/',
+      category: 'E-commerce'
+    },
+    {
+      id: 3,
+      title: 'TONG-GARDEN',
+      description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
+      image: '/Image/tong-gargen.PNG',
+      technologies: ['React.js', 'JavaScript', 'MAGENTO', 'Redux', 'React Redux', 'GraphQL', 'MUI', 'SCSS', 'Local Storage', 'Responsive Design', 'Tailwind CSS'],
+      github: '#',
+      live: 'https://devtonggarden.ethnicinfotech.in/',
+      category: 'E-commerce'
+    },
+    {
+      id: 4,
       title: 'ElecTech - React E-commerce',
       description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
       image: '/Image/ElectechReact.jpg',
-      technologies: ['React.js', 'JavaScript', 'Node.js', 'CSS3', 'Local Storage', 'Responsive Design' , 'Tailwind CSS'],
+      technologies: ['React.js', 'JavaScript', 'Node.js', 'CSS3', 'Local Storage', 'Responsive Design', 'Tailwind CSS'],
       github: 'https://github.com/ankitpativala1405/ELECTECH_REACT',
       live: '#',
       category: 'E-commerce'
     },
     {
-      id: 2,
+      id: 5,
       title: 'Exclusive - Shopping Platform',
       description: 'A comprehensive shopping platform with advanced filtering, product search, user reviews, and secure checkout process. Features modern UI design and smooth user experience.',
       image: '/Image/Exclusive.jpg',
@@ -26,45 +56,35 @@ const Projects = () => {
       category: 'Full Stack'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Dhvani Enterprise Website',
       description: 'Corporate website for Dhvani Enterprise featuring company portfolio, services showcase, contact forms, and professional design. Built with modern web technologies.',
       image: '/Image/DhvaniEnterprise.jpg',
-      technologies: ['HTMl', 'CSS', 'JavaScript', 'Responsive Design' , 'Local Storage'],
+      technologies: ['HTMl', 'CSS', 'JavaScript', 'Responsive Design', 'Local Storage'],
       github: 'https://github.com/ankitpativala1405/dhvani-enterprise-website',
       live: '#',
       category: 'Corporate'
     },
     {
-      id: 4,
+      id: 7,
       title: 'Lakme Salon Website',
       description: 'Beauty salon website with appointment booking system, service catalog, gallery showcase, and customer testimonials. Features elegant design and smooth animations.',
       image: '/Image/LakmeSalon.jpg',
-      technologies: ['React.js', 'CSS3', 'JavaScript', 'Animation Libraries' , 'Tailwind CSS'],
+      technologies: ['React.js', 'CSS3', 'JavaScript', 'Animation Libraries', 'Tailwind CSS'],
       github: 'https://github.com/ankitpativala1405/REACT/tree/master/BEAUTY-PARLOUR',
       live: '#',
       category: 'Service'
     },
     {
-      id: 5,
+      id: 8,
       title: 'Portfolio Website',
       description: 'Personal portfolio website showcasing projects, skills, and experience. Features responsive design, smooth animations, and modern UI/UX principles.',
       image: '/Image/PortFolio.jpg',
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'Media Queries', 'Animations'],
       github: 'https://github.com/ankitpativala1405/rw_ankitpativala_mediaquery_projects/tree/master/Min-width_Project',
-      live: '#',
+      live: 'https://rw-ankitpativala-mediaquery-projects.pages.dev/Min-width_Project/',
       category: 'Portfolio'
     },
-    {
-      id:6,
-      title: 'Shofy - E-Commerce Website',
-      description: `Shofy is a fully responsive and modern e-commerce web application built to provide a seamless online shopping experience. It allows users to browse products, add items to the cart, manage their orders, and complete secure transactions. Admins can manage products, view orders, and update inventory in real-time. The application focuses on speed, usability, and aesthetic appeal, leveraging modern frontend and backend technologies.`,
-      image:'/Image/Shofy.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'CSS3' , 'JavaScript' , 'HTML5' , 'Tailwind CSS' , 'Material UI' , 'Firebase' , 'Local Storage' , 'React Router' , 'React Hooks' , 'cookies' , 'Framer Motion' , 'Swiper' , 'React Toastify' , 'Radix UI'],
-      github: 'https://github.com/ankitpativala1405/Shofy',
-      live: '#',
-      category: 'Full Stack '
-    }
   ];
 
   const nextProject = () => {
