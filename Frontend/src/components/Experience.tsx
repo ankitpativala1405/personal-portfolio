@@ -21,7 +21,7 @@ const Experience = () => {
       id: 2,
       title: 'Full Stack Development Student',
       companies: ['Red And White Skill Institute'],
-      period: 'DEC-2024 - SEPT-2025',
+      period: 'DEC-2024 - AUG-2025',
       location: 'Surat, Gujarat',
       description: 'Intensive full-stack development program focusing on MERN stack technologies, modern web development practices, and industry best practices.',
       achievements: [
@@ -33,9 +33,9 @@ const Experience = () => {
     },
     {
       id: 3,
-      title: "Full Stack Development",
+      title: "Full Stack Developer",
       companies: ['Ethnic infotech Pvt Ltd.'],
-      period: 'SEPT-2025 To --',
+      period: 'AUG-2025 To --',
       location: 'Surat, Gujarat',
       description: `Hands-on experience working on real-world full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Involved in developing APIs, frontend interfaces, and integrating databases.
       Hand-on experience working on real-world Mangeto Developement Using, PHP , ScandiPWA , GraphQLetc.`,
@@ -43,7 +43,9 @@ const Experience = () => {
         'Built responsive web applications with React and Node.js',
         'Implemented RESTful APIs and GraphQL endpoints',
         'Worked on user authentication using JWT & OAuth2',
-        'Deployed applications on platforms like Vercel and Render'
+        'Deployed applications on platforms like Vercel and Render',
+        'Developed and customized Magento storefronts using ScandiPWA for high-performance PWA experiences',
+        'Implemented GraphCommerce architecture with GraphQL to optimize frontend-backend communication'
       ]
     }
   ];
@@ -82,17 +84,13 @@ const Experience = () => {
         </div>
 
         {/* Experience Timeline */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"></div>
+        <div className="mx-auto mb-16">
+          <div className="relative grid grid-cols-2 gap-8">
 
             {experiences.map((exp) => (
-              <div key={exp.id} className="relative pl-20 pb-16 last:pb-0">
-                {/* Timeline Dot */}
-                <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-primary to-secondary rounded-full border-4 border-bg-primary"></div>
-
+              <div key={exp.id} className="relative h-full">
                 {/* Experience Card */}
-                <div className="glass-card rounded-2xl p-8 card-hover">
+                <div className="glass-card rounded-2xl p-8 card-hover h-full">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold mb-2">{exp.title}</h3>

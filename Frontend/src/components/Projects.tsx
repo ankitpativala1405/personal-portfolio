@@ -10,30 +10,33 @@ const Projects = () => {
       title: 'Shofy - E-Commerce Website',
       description: `Shofy is a fully responsive and modern e-commerce web application built to provide a seamless online shopping experience. It allows users to browse products, add items to the cart, manage their orders, and complete secure transactions. Admins can manage products, view orders, and update inventory in real-time. The application focuses on speed, usability, and aesthetic appeal, leveraging modern frontend and backend technologies.`,
       image: '/Image/Shofy.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'CSS3', 'JavaScript', 'HTML5', 'Tailwind CSS', 'Material UI', 'Firebase', 'Local Storage', 'React Router', 'React Hooks', 'cookies', 'Framer Motion', 'Swiper', 'React Toastify', 'Radix UI'],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'CSS3', 'JavaScript', 'HTML5', 'Tailwind CSS', 'Material UI', 'Firebase', 'CORS', 'dotenv', 'Mongoose', 'Local Storage', 'React Router', 'Axios', 'React Hooks', 'cookies', 'Framer Motion', 'Swiper', 'React Icons', 'Lucide-React', 'React Toastify', 'Radix UI'],
       github: 'https://github.com/ankitpativala1405/Shofy',
       live: 'https://shofy-gamma.vercel.app',
-      category: 'Full Stack '
+      category: 'E-commerce Frontend',
+      role: 'Full Stack Developer'
     },
     {
       id: 2,
       title: 'BlueHira',
-      description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
+      description: 'Developed a modern, high-performance e-commerce platform using React.js and ScandiPWA, integrated with Magento via GraphQL APIs. Implemented scalable state management using Redux / React Redux and handled asynchronous data fetching with Axios. Built responsive and accessible UI components using Tailwind CSS, SCSS, Radix UI, and PostCSS, ensuring cross-device compatibility. Enhanced user experience with advanced features such as product image zoom (React Magnify), persistent cart management using Local Storage, and optimized frontend performance through modular styling and efficient component architecture.',
       image: '/Image/BlueHira.PNG',
-      technologies: ['React.js', 'ScandiPWA', 'Redux', 'React Redux', 'GraphQL', 'React Magnify', 'JavaScript', 'Magento', 'SCSS', 'Local Storage', 'Responsive Design', 'Tailwind CSS', 'RadixUI'],
+      technologies: ['React.js', 'ScandiPWA', 'Redux', 'React Redux', 'GraphQL', 'React Magnify', 'Axios', 'jquery', 'JavaScript', 'Magento', 'SCSS', 'Local Storage', 'Responsive Design', 'postcss', 'node-scss', 'Tailwind CSS', 'RadixUI'],
       github: '#',
       live: 'https://www.bluehira.com/',
-      category: 'E-commerce'
+      category: 'E-commerce',
+      role: 'Frontend Developer'
     },
     {
       id: 3,
       title: 'TONG-GARDEN',
       description: 'A modern e-commerce platform built with React.js featuring product catalog, shopping cart, user authentication, and responsive design. Implements advanced state management and modern UI components.',
       image: '/Image/tong-gargen.PNG',
-      technologies: ['React.js', 'JavaScript', 'MAGENTO', 'Redux', 'React Redux', 'GraphQL', 'MUI', 'SCSS', 'Local Storage', 'Responsive Design', 'Tailwind CSS'],
+      technologies: ['Next.js', 'JavaScript', 'TypeScript', 'MAGENTO', 'Redux', 'React Redux', 'GraphQL', 'SMTP', 'MUI', 'SCSS', 'Local Storage', 'Responsive Design', 'Cloudinary'],
       github: '#',
       live: 'https://devtonggarden.ethnicinfotech.in/',
-      category: 'E-commerce'
+      category: 'E-commerce',
+      role: 'Frontend Developer'
     },
     {
       id: 4,
@@ -43,7 +46,8 @@ const Projects = () => {
       technologies: ['React.js', 'JavaScript', 'Node.js', 'CSS3', 'Local Storage', 'Responsive Design', 'Tailwind CSS'],
       github: 'https://github.com/ankitpativala1405/ELECTECH_REACT',
       live: '#',
-      category: 'E-commerce'
+      category: 'E-commerce',
+      role: 'Full Stack Developer'
     },
     {
       id: 5,
@@ -53,30 +57,22 @@ const Projects = () => {
       technologies: ['Node.js', 'MongoDB', 'JavaScript', 'Express.js', 'HTML', 'CSS', 'Bootstrap'],
       github: 'https://github.com/ankitpativala1405/Exclusive',
       live: '#',
-      category: 'Full Stack'
+      category: 'E-commerce',
+      role: 'Full Stack Developer'
     },
     {
       id: 6,
       title: 'Dhvani Enterprise Website',
-      description: 'Corporate website for Dhvani Enterprise featuring company portfolio, services showcase, contact forms, and professional design. Built with modern web technologies.',
+      description: 'E-commerce website for Dhvani Enterprise featuring company portfolio, services showcase, contact forms, and professional design. Built with modern web technologies.',
       image: '/Image/DhvaniEnterprise.jpg',
-      technologies: ['HTMl', 'CSS', 'JavaScript', 'Responsive Design', 'Local Storage'],
+      technologies: ['HTMl', 'CSS', 'JavaScript', 'Local Storage'],
       github: 'https://github.com/ankitpativala1405/dhvani-enterprise-website',
       live: '#',
-      category: 'Corporate'
+      category: 'E-commerce',
+      role: 'Full Stack Developer'
     },
     {
       id: 7,
-      title: 'Lakme Salon Website',
-      description: 'Beauty salon website with appointment booking system, service catalog, gallery showcase, and customer testimonials. Features elegant design and smooth animations.',
-      image: '/Image/LakmeSalon.jpg',
-      technologies: ['React.js', 'CSS3', 'JavaScript', 'Animation Libraries', 'Tailwind CSS'],
-      github: 'https://github.com/ankitpativala1405/REACT/tree/master/BEAUTY-PARLOUR',
-      live: '#',
-      category: 'Service'
-    },
-    {
-      id: 8,
       title: 'Portfolio Website',
       description: 'Personal portfolio website showcasing projects, skills, and experience. Features responsive design, smooth animations, and modern UI/UX principles.',
       image: '/Image/PortFolio.jpg',
@@ -125,8 +121,13 @@ const Projects = () => {
 
               {/* Project Details */}
               <div className="space-y-6">
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-white text-sm font-medium">
-                  {projects[currentProject].category}
+                <div className="flex w-full justify-between py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-white text-sm font-medium">
+                  <span>
+                    {projects[currentProject].category}
+                  </span>
+                  <span>
+                    Role: {projects[currentProject].role}
+                  </span>
                 </div>
 
                 <h3 className="text-3xl font-bold">{projects[currentProject].title}</h3>
@@ -159,7 +160,7 @@ const Projects = () => {
                     View Code
                   </a>
                   <a
-                    href={projects[currentProject].live}
+                    href={projects[currentProject].live} target='blank'
                     className="btn btn-primary flex items-center gap-2"
                   >
                     <ExternalLink size={20} />

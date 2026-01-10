@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Code, Briefcase, GraduationCap, Award } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Code, value: 5, label: 'Projects Completed', suffix: '+' },
     { icon: Briefcase, value: 8, label: 'Years Experience', suffix: '+' },
     { icon: GraduationCap, value: 3, label: 'Certifications', suffix: '' },
     { icon: Award, value: 15, label: 'Technologies', suffix: '+' }
@@ -69,9 +68,24 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-7xl mx-auto">
-            I am a passionate and dedicated MERN Stack Developer with a strong foundation in modern web technologies and a keen eye for design. I specialize in building responsive, user-friendly, and high-performance web applications using React.js, Next.js, Node.js, and Express.js. With hands-on experience in crafting intuitive user interfaces with Tailwind CSS, Material UI, and other modern frameworks, I take pride in writing clean, maintainable code that delivers real value. I thrive in collaborative environments, enjoy solving complex problems, and continuously push myself to learn new tools and best practices. My goal is to create meaningful digital experiences that not only meet but exceed user expectations.
+          <p className="text-xl text-text-secondary max-w-7xl mx-auto leading-relaxed">
+            I am a dedicated and detail-oriented Full Stack Developer (MERN) with a strong foundation
+            in modern web technologies and a passion for building scalable, user-centric applications.
+            Born in May 1999, I completed my SSC in March 2014 and HSC in March 2016, after which I gained
+            over 8 years of valuable professional experience in the diamond industry. This experience
+            strengthened my discipline, problem-solving abilities, attention to detail, and commitment
+            to quality—skills that I now bring into software development.
+            <br /><br />
+            Since August 2025, I have been working professionally as a Full Stack Developer, specializing
+            in React.js, Next.js, Node.js, Express.js, and MongoDB. I have hands-on experience with
+            ScandiPWA and GraphCommerce for building modern, high-performance eCommerce applications,
+            along with working extensively with GraphQL APIs. Skilled in creating responsive and
+            intuitive user interfaces using Tailwind CSS and Material UI (MUI), I also build secure,
+            efficient backend systems using RESTful APIs. I thrive in collaborative environments,
+            adapt quickly to new technologies, and am highly motivated to continuously learn and
+            deliver meaningful digital solutions that create real business value.
           </p>
+
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -79,18 +93,37 @@ const About = () => {
           <div className="space-y-6">
             <div className="glass-card rounded-2xl p-8">
               <h3 className="text-2xl font-semibold mb-4 gradient-text">My Story</h3>
+
               <p className="text-text-secondary leading-relaxed mb-4">
-                I'm a motivated and creative MERN Stack Developer with expertise in building scalable web applications
-                using React.js, Next.js, and Redux. I have a strong foundation in crafting modern, responsive user
-                interfaces with frameworks like Material UI, Tailwind CSS, and other cutting-edge technologies.
+                My professional journey began in the diamond industry, where I spent over eight years
+                developing a strong work ethic, precision, and problem-solving mindset. Working in a
+                fast-paced and quality-driven environment shaped my attention to detail, discipline,
+                and ability to perform consistently under pressure—skills that now define my approach
+                to software development.
               </p>
+
+              <p className="text-text-secondary leading-relaxed mb-4">
+                Driven by a passion for technology, I transitioned into web development and built a
+                solid foundation as a Full Stack MERN Developer. I specialize in creating scalable and
+                high-performance applications using React.js, Next.js, Node.js, Express.js, and MongoDB.
+                I also have hands-on experience with ScandiPWA and GraphCommerce, building modern,
+                headless eCommerce solutions powered by GraphQL.
+              </p>
+
               <p className="text-text-secondary leading-relaxed">
-                both frontend and backend development, I bring a logical problem-solving approach
-                and creative mindset to every project. I'm known for my adaptability under pressure and collaborative
-                spirit, always eager to tackle new challenges and contribute to excellent user-centric web solutions.
+                I enjoy working across both frontend and backend development, crafting responsive and
+                intuitive user interfaces with Tailwind CSS and Material UI while designing secure and
+                efficient APIs. I thrive in collaborative environments, adapt quickly to new
+                technologies, and continuously strive to improve my skills to deliver clean,
+                maintainable, and user-focused digital solutions.
               </p>
             </div>
 
+
+          </div>
+
+          {/* Stats Grid */}
+          <div ref={statsRef} className="grid grid-cols-2 gap-6">
             {/* Languages */}
             <div className="glass-card rounded-2xl p-8">
               <h3 className="text-2xl font-semibold mb-6 gradient-text">Languages</h3>
@@ -111,10 +144,6 @@ const About = () => {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Stats Grid */}
-          <div ref={statsRef} className="grid grid-cols-2 gap-6">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (

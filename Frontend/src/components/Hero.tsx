@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const Hero = () => {
@@ -68,14 +68,12 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-xl text-text-secondary mb-8 max-w-5xl mx-auto leading-relaxed">
-            Motivated and creative MERN Stack Developer in building scalable web
-            applications using React.js, Next.js, and Redux. Skilled in crafting modern,
-            responsive user interfaces with frameworks like Material UI, Tailwind CSS, and
-            others. Strong foundation in HTML, CSS, JavaScript, with additional knowledge of
-            backend technologies such as Node.js, Express.js, and RESTful APIs. A logical
-            problem-solver known for a creative mindset, adaptability under pressure, and a
-            collaborative spirit. Eager to tackle new challenges, continuously learn, and
-            contribute to developing excellent user-centric web solutions.
+            Full Stack MERN Developer with specialized experience in GraphCommerce and ScandiPWA,
+            focused on building high-performance, scalable, and modern eCommerce solutions.
+            Skilled in React, Next.js, GraphQL, Node.js, and Magento integrations, with a strong
+            emphasis on responsive design, performance optimization, and user-centric
+            development. Passionate about creating seamless digital experiences that combine
+            clean architecture with engaging UI.
           </p>
 
           {/* Contact Info */}
@@ -87,7 +85,7 @@ const Hero = () => {
               <Phone size={20} className="text-primary" />
               <span>+91 9723665181</span>
             </a>
-            <a className="flex items-center gap-2 text-text-secondary"  href="mailto:ankitj1405@gmail.com">
+            <a className="flex items-center gap-2 text-text-secondary" href="mailto:ankitj1405@gmail.com">
               <Mail size={20} className="text-primary" />
               <span>ankitj1405@gmail.com</span>
             </a>
@@ -125,14 +123,14 @@ const Hero = () => {
             >
               <Linkedin size={24} />
             </a>
-            <a
+            {/* <a
               href="https://portfolio-six-red-97.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
             >
               <span className="font-bold">P</span>
-            </a>
+            </a> */}
           </div>
         </div>
 
